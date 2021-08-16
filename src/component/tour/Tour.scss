@@ -1,5 +1,53 @@
-@import '../../index.scss';
+@import "../../index.scss";
 
-.tour{
-
+.tour {
+  background: $mainGrey;
+  border-radius: 0.8rem;
+  margin: 1rem 0;
+  padding: 0.7rem;
+  border: 1px solid red;
+  :first-child {
+    width: 100%;
+    border-top-left-radius: 0.8rem;
+    border-top-right-radius: 0.8rem;
+  }
+}
+.img-container{
+    position: relative;
+}
+.delete-icon {
+  width: 2.5rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  transition: all 0.5s linear;
+  opacity: 0;
+}
+.img-container:hover .delete-icon{
+opacity: 1;
+}
+.tour-info{
+    padding: 1rem 0.5rem;
+    h3{
+        text-transform: uppercase;
+    }
+    h4{
+        color: $mainBlack;
+        text-transform: capitalize;
+        margin: 0.5rem 0 0.5rem 0;
+    }
+    h5{
+        text-transform: capitalize;
+        position: relative;
+       
+        :first-child{
+            display: table;
+            width: 1rem;
+            position: absolute;
+            top: 0.2rem;
+            left: 1.7rem;
+            cursor: pointer;
+        }
+    }
 }
