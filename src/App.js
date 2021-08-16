@@ -1,16 +1,16 @@
 import React from "react";
 
 // import components
-import "./component/Navbar";
+import Navbar from "./component/Navbar";
+import Tourlist from "./component/tourlist/Tourlist";
 
 import "./App.scss";
-import Navbar from "./component/Navbar";
-
 const App = () => {
   return (
-    <div>
+    <main>
       <Navbar />
-    </div>
+      <Tourlist />
+    </main>
   );
 };
 
