@@ -3,17 +3,26 @@ import icon from "../../delete.png";
 import iconDown from "../../img/down-arrow.png";
 import "./Tour.scss";
 
-const Tour = ({ img, city, name, info }) => {
+const Tour = ({ id, img, city, name, info }) => {
   const [show, setShow] = useState(false);
 
   const showInfoHandler = () => {
     setShow(!show);
   };
+
+  const deleteHandle = (id) => {
+   
+  };
   return (
     <article className="tour">
       <div className="img-container">
         <img src={img} alt="laptop" />
-        <img src={icon} alt="deleteIcon" className="delete-icon" />
+        <img
+          src={icon}
+          alt="deleteIcon"
+          className="delete-icon"
+          onClick={() => deleteHandle(id)}
+        />
       </div>
       <div className="tour-info">
         <h3>{city}</h3>

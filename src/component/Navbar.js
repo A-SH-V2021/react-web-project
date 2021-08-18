@@ -7,17 +7,17 @@ const Navbar = () => {
       <img src={logo} alt="" />
       <ul className="nav-links">
         <li>
-          <a href="" className="nav-link">
+          <a href="#" className="nav-link">
             home
           </a>
         </li>
         <li>
-          <a href="" className="nav-link">
+          <a href="#" className="nav-link">
             about
           </a>
         </li>
         <li>
-          <a href="" className="nav-link active" >
+          <a href="#" className="nav-link active" >
             tours
           </a>
         </li>
