@@ -7,10 +7,10 @@ import "./Tourlist.scss";
 const Tourlist = () => {
 
   const [data, setData] = useState(tourData)
-  console.log(data);
+ 
   return (
     <section className='tourlist'>
-     {tourData.map((item)=>{
+     {data.map((item)=>{
 return <Tour key={item.id} {...item}/>
      })}
     </section>
