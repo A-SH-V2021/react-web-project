@@ -1,19 +1,24 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import Tour from "../tour/Tour";
-import {tourData} from '../../tourData'
+import { useGlobalContext } from "../../context/context";
 
 import "./Tourlist.scss";
 
 const Tourlist = () => {
+  const { ...state } = useGlobalContext();
 
-  const [data, setData] = useState(tourData)
- 
   return (
-    <section className='tourlist'>
-     {data.map((item)=>{
-return <Tour key={item.id} {...item}/>
-     })}
-    </section>
+    <>
+      {state.data.length > 0 ? (
+        <section className="tourlist">
+          {state.data.map((item) => {
+            return <Tour key={item.id} {...item} />;
+          })}
+        </section>
+      ) : (
+        <p className="noItem">no items for show</p>
+      )}
+    </>
   );
 };
 

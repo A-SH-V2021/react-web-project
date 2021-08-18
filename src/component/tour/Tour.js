@@ -2,17 +2,17 @@ import React, { useState } from "react";
 import icon from "../../delete.png";
 import iconDown from "../../img/down-arrow.png";
 import "./Tour.scss";
+import { useGlobalContext } from "../../context/context";
 
 const Tour = ({ id, img, city, name, info }) => {
+  const {deleteHandle}=useGlobalContext()
+ 
   const [show, setShow] = useState(false);
 
   const showInfoHandler = () => {
     setShow(!show);
   };
 
-  const deleteHandle = (id) => {
-   
-  };
   return (
     <article className="tour">
       <div className="img-container">
@@ -33,7 +33,7 @@ const Tour = ({ id, img, city, name, info }) => {
             src={iconDown}
             alt="iconDown"
             className="iconDown"
-            onClick={showInfoHandler}
+            onClick={()=>showInfoHandler()}
           />
         </h5>
         {show && <p>{info}</p>}

@@ -2,11 +2,20 @@
   padding: 0 1rem;
   display: grid;
   grid-gap: 1rem;
+  align-content: center;
+}
+.noItem {
+  margin-top: 10%;
+  font-size: 2rem;
+  color: red;
+  text-transform: uppercase;
+ text-align: center;
+ 
 }
 
 @media screen and (min-width: 468px) {
     .tourlist {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(1, 1fr);
     }
   }
 @media screen and (min-width: 768px) {
