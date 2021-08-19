@@ -14,3 +14,13 @@ body {
   background: $mainGrey;
   color: $mainGreen;
 }
+.error{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.error h2{
+  margin-bottom:15rem;
+  color: red;
+}
